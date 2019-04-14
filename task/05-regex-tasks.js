@@ -31,6 +31,8 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
+   
+   /*return /{[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[0-9A-F]{4}-[0-9A-F]{12}}/gi;*/
    throw new Error('Not implemented');
 }
 
@@ -53,6 +55,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
+   /*let w = new RegExp(/\w*p[oai ]t\w**/
    throw new Error('Not implemented');
 }
 
@@ -72,6 +75,7 @@ function getRegexForPitSpot() {
  * @return {RegExp}
  */
 function getRegexForIPv4() {
+   
    throw new Error('Not implemented');
 }
 
