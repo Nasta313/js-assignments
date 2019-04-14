@@ -227,7 +227,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    return str.split("").reverse().join().replace(/\,/g, '');
 }
 
 
@@ -244,7 +244,12 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    let y=0;
+    for(; num; num = Math.floor(num / 10)) {
+        y *= 10;
+        y += num % 10;
+    } 
+    return y;
 }
 
 
@@ -269,6 +274,7 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
+    
     throw new Error('Not implemented');
 }
 
@@ -288,7 +294,16 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+    var sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num = Math.floor(num/10);
+    }
+    if(sum>9){
+        return (Math.floor(sum/10))+(sum%10);
+    } else {
+        return sum;
+    }
 }
 
 
